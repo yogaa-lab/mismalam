@@ -1,21 +1,31 @@
 import streamlit as st
 
-# mengatur judul tab browser
- st.set_page_config(page_title="aplikasi pertamaku", page_icon="+")
+# Mengatur judul tab browser
+st.set_page_config(
+    page_title="Aplikasi Pertamaku",
+    page_icon="✨"
+)
 
- # menampilkan judul dan teks di web
- st.title("a plikasi streamlit pertamaku!")
-st.write("halo dunia! jika kamu bisa melihat halaman ini, berarti kamu sudah **berhasil** meng-upload dan mendeploy aplikasi streamlit dari github.")
+# Menampilkan judul dan teks di web
+st.title("Aplikasi Streamlit Pertamaku!")
+st.write(
+    "Halo dunia! Jika kamu bisa melihat halaman ini, "
+    "berarti kamu sudah **berhasil** meng-upload dan "
+    "mendeploy aplikasi Streamlit dari GitHub."
+)
 
-st.divider() # garis pembatas
+# Garis pembatas
+st.divider()
 
- # input sederhana
-  nama = st.text_input("siapa namamu?")
+# Input sederhana
+nama = st.text_input("Siapa namamu?")
 
- # tombol interaktif
- if st.button("klik saya!"):
-   if nama:
-       st.succes(f"halo, {nama}! selamat belajar streamlit. kamu hebat!")
-       st.ballons() # memunculkan animasi balon
-   else:
-       st.warning("isi namamu dulu di kotak atas ya!")
+# Tombol interaktif
+if st.button("Klik Saya!"):
+    if nama:
+        st.success(
+            f"Halo, {nama}! Selamat belajar Streamlit. Kamu hebat!"
+        )
+        st.balloons()  # Memunculkan animasi balon
+    else:
+        st.warning("Isi namamu dulu di kotak atas ya!")
